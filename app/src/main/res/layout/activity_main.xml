@@ -88,13 +88,13 @@
             android:text="10%"/>
 
         <RadioButton
-            android:id="@+id/rb_optione_two"
+            android:id="@+id/rb_option_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="15%"/>
 
         <RadioButton
-            android:id="@+id/option_three"
+            android:id="@+id/rb_option_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20%"/>
