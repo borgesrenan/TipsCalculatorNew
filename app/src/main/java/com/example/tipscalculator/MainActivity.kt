@@ -6,22 +6,23 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.tipscalculator.databinding.ActivityMainBinding
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
+
+    //declarando o binding
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        //inicializando o binding
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val btnDone = findViewById<Button>(R.id.btn_done)
-        val btnClean = findViewById<Button>(R.id.btn_clean)
-        val edtTotal = findViewById<TextInputEditText>(R.id.tie_total)
-        val edtNumPeople = findViewById<TextInputEditText>(R.id.tie_num_people)
-
-        btnDone.setOnClickListener {
-            println("Total: " + edtTotal.text)
-            println("Pessoas: " + edtNumPeople.text)
+        binding.btnClean.setOnClickListener {
+            println("Total: " + binding.tieTotal.text)
+            println("Pessoas: " + binding.tieNumPeople.text)
         }
 
     }
